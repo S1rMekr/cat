@@ -11,6 +11,7 @@
             align-items: center;
             justify-content: center;
             height: 100vh;
+            margin: 0;
             font-family: Arial, sans-serif;
         }
         button {
@@ -19,16 +20,18 @@
             cursor: pointer;
         }
         img {
-            max-width: 100%;
-            height: auto;
+            max-width: 90vw;  /* Ограничение по ширине */
+            max-height: 80vh;  /* Ограничение по высоте */
             margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>
 <body>
     <h1>Random Cat Generator</h1>
     <button onclick="getRandomCat()">Get Random Cat</button>
-    <img id="catImage" src="" alt="Random Cat">
+    <img id="catImage" src="https://cataas.com/cat" alt="Random Cat">
 
     <script>
         function getRandomCat() {
