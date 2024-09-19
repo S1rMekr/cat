@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Cat Generator</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Random Cat Generator</h1>
+    <button onclick="getRandomCat()">Get Random Cat</button>
+    <img id="catImage" src="" alt="Random Cat">
+
+    <script>
+        function getRandomCat() {
+            const img = document.getElementById('catImage');
+            img.src = 'https://cataas.com/cat?random=' + new Date().getTime();  // To avoid caching
+        }
+    </script>
+</body>
+</html>
